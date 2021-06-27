@@ -23,3 +23,8 @@ You will also see any lint errors in the console.
       
  ### How to win
       - Make all the grid numbers equal
+
+## [Click to play](https://tzcuu.csb.app/)
+
+
+            
