@@ -1,13 +1,36 @@
 import "./Grid.css";
 import Square from "./Square";
 function Grid({ state, setstate }) {
+    console.log('render')
+    let i=0
   let handleClick = (e) => {
-    const i = parseInt(e.target.id);
+    // const i = parseInt(e.target.id);
+    switch (e.keyCode) {
+        case 37:
+            i=i-1
+            break;
+    
+        case 38:
+            i=i-3
+            break;
+    
+        case 39:
+            i=i+1
+            break;
+    
+        case 40:
+            i=i+3
+            break;
+    
+        default:
+            return
+    }
+
     const history = state.square.slice();
     history[i]++;
     setstate({ square: history });
-    console.log(e.keyCode,e.target.value)
   };
+    
   let curr = state;
   // console.log(curr[0].square)
   return (
