@@ -36,6 +36,11 @@ function Grid({ state, setstate }) {
   
   return (
     <div className="boardStyle">
+        <p>
+        {state.i === 0
+          ? "click on top left to start and use arrow keys to play"
+          : ""}
+      </p>
         <div className="board-row rowStyle">
         <Square id="0" turn={curr.square[0]} click={handleClick} disable={chance}/>
         <Square id="1" turn={curr.square[1]} click={handleClick} disable={chance}/>
@@ -51,6 +56,9 @@ function Grid({ state, setstate }) {
         <Square id="7" turn={curr.square[7]} click={handleClick} disable={chance}/>
         <Square id="8" turn={curr.square[8]} click={handleClick} disable={chance}/>
       </div>
+      <p className="instructionsStyle">
+        {chance ? "You Win!! click reset to play again" : ""}
+      </p>
     </div>
   );
 }

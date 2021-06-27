@@ -9,7 +9,7 @@ function App() {
   //  console.log(state.square)
   return (
     <div className="App">
-      <button onClick={() => setstate(initialstate)}>Reset</button>
+      <button className="btn" onClick={() => setstate(initialstate)}>Reset</button>
       <Grid state={state} setstate={setstate} />
     </div>
   );
