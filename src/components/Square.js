@@ -1,8 +1,8 @@
 import React from 'react'
 import './Grid.css'
-function Square({ id, turn, click }) {
+function Square({ id, turn, click,disable }) {
     return (
-        <button onKeyUp={click}>
+        <button onKeyUp={click} disabled={disable}>
             <div
                 id={id}
                 className="squareStyle"
